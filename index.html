@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    
+    <audio id="audio1">
+        <source src="./assets/WhatsApp Ptt 2023-02-06 at 07.32.45.ogg" type="audio/ogg">
+    </audio>
+
+        <input id="audioBar" type="range" value="0">
+        <progress id="teste" max="100%"> </progress>
+
+    <div class="controls">
+        <img class="bnt" onclick="volta_5()" src="./assets/controls/volta5.png">
+        <img class="bnt" onclick="avanca_5()" src="./assets/controls/avanca5.png">        
+        <img class="bnt" onclick="play()" src="./assets/controls/play-button.png">
+        <img class="bnt" onclick="pause()" src="./assets/controls/stop-button.png">
+
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
