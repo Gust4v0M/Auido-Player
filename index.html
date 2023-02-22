@@ -14,17 +14,27 @@
     </audio>
 
         <progress id="audioBar" max="100%"  value="0"> </progress>
+    
 
-
-    <div class="controls">
-        <img class="bnt" onclick="volta_5()" src="./assets/controls/volta5.png">
-        <img class="bnt" onclick="avanca_5()" src="./assets/controls/avanca5.png">        
+    <div class="controls">          
+        <img class="bnt" onclick="lastMusic()" src="./assets/controls/backward.png">
+        <img class="bnt" onclick="volta_5()" src="./assets/controls/volta5.png">        
         <img class="bnt" onclick="play()" src="./assets/controls/play-button.png">
         <img class="bnt" onclick="pause()" src="./assets/controls/stop-button.png">
+        <img class="bnt" onclick="avanca_5()" src="./assets/controls/avanca5.png">
+        <img class="bnt" onclick="nextMusic()" src="./assets/controls/arrows.png">
+
+
 
 
     </div>
-    <p id="musicTime"></p>
+        <div id="Ctimer">
+            00/00
+        </div>
+
+        <div id="Atimer">
+            00/00
+        </div>
 
     <script src="./script.js"></script>
 </body>
