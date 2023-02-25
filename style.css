@@ -1,13 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .controls{
     width: 30px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20%;
+
     
 }
 
 .bnt{
     width: 100%;
-
-    color: rgb rgb(56, 56, 57);
-    color: rgb(255, 209, 60)
+    padding-right: 5px;    
+    
 }
 
+.container{
+    max-width: 300px;
+    height: 450px;
+    border-style: groove;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#sound{
+display: flex;
+align-items: center;
+}
+#Ctimer{
+    display: flex;
+}
+#Atimer{
+    display: flex;
+
+}
+ 
+.img{
+     border-radius: 140px;
+     width: 200px;
+     margin-top: 35px;
+     margin-left: 15%;
+     
+}
+
+#positionTimer{
+    display:flex;
+}
+
+#Ctimer{
+    margin-left: 5%;
+}
+
+#Atimer{
+    margin-left: 70%;
+}
+
+#audioBar{
+    width: 90%;
+    margin-left: 4%;
+
+}
+#pause{
+    display: none;
+}
