@@ -4,6 +4,8 @@ let Ctimer = document.getElementById("Ctimer");
 let Atimer = document.getElementById("Atimer");
 let soundIcon = document.getElementById("sound-icon")
 let soundBar = document.getElementById("sound-bar")
+let playBnt = document.getElementById("play-bnt")
+let pauseBnt = document.getElementById("pause-bnt")
 
 
 audio.addEventListener("timeupdate", function () {
@@ -42,10 +44,7 @@ var allMusicTime = setInterval(function() {
   Atimer.innerHTML = min + ":" + sec;
 },10)
 
-function nextMusic(){
 
-console.log("teste")
-}  
 
 function showSoundBar(){
   soundIcon.innerHTML = soundBar.style.display = "inline"
@@ -59,12 +58,31 @@ function volume(amount){
   
   }
 
+playBnt.addEventListener("click", function(){
+  playBnt.innerHTML = pauseBnt.style.display = "inline-block"
+  playBnt.innerHTML = playBnt.style.display = "none"
 
-let playlist = {audio : "./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
-                Name : "When i was your men"
-              
-              }
+  console.log("teste")
+})
 
+
+pauseBnt.addEventListener("click", function(){
+  pauseBnt.innerHTML = playBnt.style.display = "inline-block"
+  pauseBnt.innerHTML = pauseBnt.style.display = "none"
+
+  console.log("teste")
+})
+
+// '"let playlist = [ "./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
+//                   "./assets/WhatsApp Ptt 2023-02-06 at 07.32.45.ogg"
+                        
+// ]
+
+// function nextMusic(){
+
+//   audio = playlist
+//   console.log("teste")
+//   }  "'
 
 
 
