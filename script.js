@@ -2,6 +2,8 @@ let audio = document.getElementById("audio1");
 let audioBar = document.getElementById("audioBar");
 let Ctimer = document.getElementById("Ctimer");
 let Atimer = document.getElementById("Atimer");
+let soundIcon = document.getElementById("sound-icon")
+let soundBar = document.getElementById("sound-bar")
 
 
 audio.addEventListener("timeupdate", function () {
@@ -43,7 +45,20 @@ var allMusicTime = setInterval(function() {
 function nextMusic(){
 
 console.log("teste")
+}  
+
+function showSoundBar(){
+  soundIcon.innerHTML = soundBar.style.display = "inline"
+
+  console.log("teste")
 }
+
+function volume(amount){ 
+
+  audio.volume = amount
+  
+  }
+
 
 let playlist = {audio : "./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
                 Name : "When i was your men"

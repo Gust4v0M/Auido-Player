@@ -3,22 +3,6 @@
     padding: 0px;
 }
 
-.controls{
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 20%;
-
-    
-}
-
-.bnt{
-    width: 100%;
-    padding-right: 5px;    
-    
-}
-
 .container{
     max-width: 300px;
     height: 450px;
@@ -27,10 +11,34 @@
     margin: auto;
 }
 
-#sound{
-display: flex;
-align-items: center;
+.controls{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20%;   
 }
+
+#sound{
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    margin-top:10px;
+}
+
+#sound-icon{
+    margin-right: 5px;
+}
+input{
+   display:none;
+}   
+
+.bnt{
+    width: 100%;
+    padding-right: 5px;    
+    
+}
+
 #Ctimer{
     display: flex;
 }

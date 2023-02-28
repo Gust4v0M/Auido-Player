@@ -25,12 +25,9 @@
         <span id="Ctimer">00/00</span>
 
         <span id="Atimer"> 00/00 </span>
-    </div>
+    </div>""
         <progress id="audioBar" max="100%"  value="0"> </progress>
 
-        <div><img id="sound" height="25px" src="./assets/controls/volume.png" alt=""></div>
-
-    
 
         <div class="controls">          
           <img class="bnt" onclick="lastMusic()" src="./assets/controls/backward.png">
@@ -41,6 +38,11 @@
           <img class="bnt" onclick="nextMusic()" src="./assets/controls/arrows.png">
         </div>
 
+
+        <div id="sound">
+            <img id="sound-icon" height="25px" onclick="showSoundBar()" src="./assets/controls/volume.png" alt="">
+            <input id="sound-bar" max="1" min="0" type="range" step="0.1" oninput="volume(this.value)">
+        </div>
   
  </div>
 
