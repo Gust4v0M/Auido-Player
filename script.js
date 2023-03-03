@@ -2,10 +2,10 @@ let audio = document.getElementById("audio1");
 let audioBar = document.getElementById("audioBar");
 let Ctimer = document.getElementById("Ctimer");
 let Atimer = document.getElementById("Atimer");
-let soundIcon = document.getElementById("sound-icon")
-let soundBar = document.getElementById("sound-bar")
-let playBnt = document.getElementById("play-bnt")
-let pauseBnt = document.getElementById("pause-bnt")
+let soundIcon = document.getElementById("sound-icon");
+let soundBar = document.getElementById("sound-bar");
+let playBnt = document.getElementById("play-bnt");
+let pauseBnt = document.getElementById("pause-bnt");
 
 
 audio.addEventListener("timeupdate", function () {
@@ -14,13 +14,11 @@ audio.addEventListener("timeupdate", function () {
 
 audioBar.addEventListener("click", atuliza);
 
-
 function atuliza(e) {
   let percentage = e.offsetX / this.offsetWidth;
   audio.currentTime = percentage * audio.duration;
   console.log(percentage);
 }
-
 
 var musicTime = setInterval(function () {
   var min = Math.floor(audio.currentTime / 60);
@@ -32,8 +30,7 @@ var musicTime = setInterval(function () {
   Ctimer.innerHTML = min + ":" + sec;
 }, 10);
 
-
-var allMusicTime = setInterval(function() {
+var allMusicTime = setInterval(function () {
   let min = Math.floor(audio.duration / 60);
   let sec = Math.floor(audio.duration % 60);
 
@@ -42,47 +39,61 @@ var allMusicTime = setInterval(function() {
   }
 
   Atimer.innerHTML = min + ":" + sec;
-},10)
+}, 10);
 
+function showSoundBar() {
+  soundIcon.innerHTML = soundBar.style.display = "inline";
 
-
-function showSoundBar(){
-  soundIcon.innerHTML = soundBar.style.display = "inline"
-
-  console.log("teste")
+  console.log("teste");
 }
 
-function volume(amount){ 
+function volume(amount) {
+  audio.volume = amount;
+}
 
-  audio.volume = amount
+playBnt.addEventListener("click", function () {
+  playBnt.innerHTML = pauseBnt.style.display = "inline-block";
+  playBnt.innerHTML = playBnt.style.display = "none";
+
   
+});
+
+pauseBnt.addEventListener("click", function () {
+  pauseBnt.innerHTML = playBnt.style.display = "inline-block";
+  pauseBnt.innerHTML = pauseBnt.style.display = "none";
+
+
+});
+
+let playlist = ["./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
+                "./assets/WhatsApp Ptt 2023-02-06 at 07.32.45.ogg"];
+
+
+function nextMusic() {
+
+  let i = 0;
+
+  if(i === playlist.length - 1){
+    i = 0;
+  }else{
+    i++
   }
 
-playBnt.addEventListener("click", function(){
-  playBnt.innerHTML = pauseBnt.style.display = "inline-block"
-  playBnt.innerHTML = playBnt.style.display = "none"
+  audio.src = playlist[i]
+  audio.addEventListener("ended", nextMusic)
 
-  console.log("teste")
-})
+}
+
+// if(audio  === null){
+//   throw "Playlist Player does not exists ...";
+// }else{
+
+//   audio.src = playlist[i];
+
+//   audio.addEventListener("ended", nextMusic, false)
+// }
 
 
-pauseBnt.addEventListener("click", function(){
-  pauseBnt.innerHTML = playBnt.style.display = "inline-block"
-  pauseBnt.innerHTML = pauseBnt.style.display = "none"
-
-  console.log("teste")
-})
-
-// '"let playlist = [ "./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
-//                   "./assets/WhatsApp Ptt 2023-02-06 at 07.32.45.ogg"
-                        
-// ]
-
-// function nextMusic(){
-
-//   audio = playlist
-//   console.log("teste")
-//   }  "'
 
 
 
@@ -98,5 +109,3 @@ function play() {
 function pause() {
   audio.pause();
 }
-
-
