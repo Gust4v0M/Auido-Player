@@ -4,12 +4,29 @@
 }
 
 .container{
+    background-image: linear-gradient(30deg,
+    #F6E1C3,
+    #7A3E65,
+    #A84448
+    
+);
     max-width: 300px;
     height: 450px;
     border-style: groove;
     border-radius: 20px;
     margin: auto;
 }
+
+body{
+    background-image: linear-gradient(90deg,
+        #F6E1C3,
+        #7A3E65,
+        #A84448
+        
+    );
+}
+
+
 
 .controls{
     width: 30px;

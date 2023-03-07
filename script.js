@@ -75,6 +75,7 @@ function nextMusic() {
 
   if(i === playlist.length - 1){
     i = 0;
+
   }else{
     i++
   }
