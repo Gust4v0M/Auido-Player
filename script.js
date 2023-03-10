@@ -65,15 +65,27 @@ pauseBnt.addEventListener("click", function () {
 
 });
 
-let playlist = ["./assets/Bruno_Mars_-_When_I_Was_Your_Man.mp3",
-                "./assets/WhatsApp Ptt 2023-02-06 at 07.32.45.ogg"];
+let playlist = [{mp3:"./assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3", 
+                src:"/assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
+                title:"Talking to the Moon", img:"./assets/capas/TTM-pic.webp",
+
+                mp3:"./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
+                src:"./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
+                title:"Locked Out of Heaven", img: "./assets/capas/Locked Out of Heaven.webp",
+
+                mp3:"./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3"  ,
+                src:"./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3",
+                title:"Nothin on You", img: "./assets/capas/Nothin_On_You.jfif"
+
+              }]
+
 
 
 function nextMusic() {
 
   let i = 0;
 
-  if(i === playlist.length - 1){
+  if(i === playlist.length - 1){  
     i = 0;
 
   }else{
