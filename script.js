@@ -17,14 +17,14 @@ var i = 0;
 var playlist = [
   {
     mp3: "./assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
-    src: "/assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
+    src: "./assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
     title: "Talking to the Moon",
     img: "./assets/capas/TTM-pic.webp",
   },
 
   {
-    mp3: "./Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
-    src: "./Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
+    mp3: "./assets/songs/Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
+    src: "./assets/songs/Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
     title: "Locked Out of Heaven",
     img: "./assets/capas/Locked Out of Heaven.webp",
   },
