@@ -8,6 +8,11 @@ let playBnt = document.getElementById("play-bnt");
 let pauseBnt = document.getElementById("pause-bnt");
 let img = document.getElementById("img")
 
+
+addEventListener("load", function(){
+  img.style.animationPlayState = 'paused';
+})
+
 var i = 0;
 var playlist = [
   {
@@ -18,8 +23,8 @@ var playlist = [
   },
 
   {
-    mp3: "./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
-    src: "./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
+    mp3: "./Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
+    src: "./Bruno_Mars_-_Locked_Out_Of_Heaven_(Jesusful.com).mp3",
     title: "Locked Out of Heaven",
     img: "./assets/capas/Locked Out of Heaven.webp",
   },
