@@ -10,14 +10,22 @@
     #A84448
     
 );
+    box-sizing: border-box;
     max-width: 300px;
     height: 450px;
     border-style: groove;
     border-radius: 20px;
+    box-shadow:0px 6px 5px #a294eb;
     margin: auto;
+
 }
 
+#nome_musica{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 body{
+    
     background-image: linear-gradient(90deg,
         #c4948c,
         #7A3E65,
@@ -64,13 +72,27 @@ input{
 
 }
  
-.img{
+
+
+#img{
      border-radius: 140px;
      width: 200px;
      margin-top: 35px;
      margin-left: 15%;
-     
+     box-shadow:0px 4px 5px #a294eb;
+     animation-name: spin;
+     animation-duration: 5000ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+
 }
+
+@keyframes spin{
+    from 
+        {transform: rotate(0deg)}
+    to 
+        {transform: rotate(360deg);}
+  }
 
 #positionTimer{
     display:flex;

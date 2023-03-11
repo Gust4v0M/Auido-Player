@@ -6,7 +6,31 @@ let soundIcon = document.getElementById("sound-icon");
 let soundBar = document.getElementById("sound-bar");
 let playBnt = document.getElementById("play-bnt");
 let pauseBnt = document.getElementById("pause-bnt");
+let img = document.getElementById("img")
 
+var i = 0;
+var playlist = [
+  {
+    mp3: "./assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
+    src: "/assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
+    title: "Talking to the Moon",
+    img: "./assets/capas/TTM-pic.webp",
+  },
+
+  {
+    mp3: "./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
+    src: "./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
+    title: "Locked Out of Heaven",
+    img: "./assets/capas/Locked Out of Heaven.webp",
+  },
+
+  {
+    mp3: "./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3",
+    src: "./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3",
+    title: "Nothin on You",
+    img: "./assets/capas/Nothin_On_You.jfif",
+  },
+];
 
 audio.addEventListener("timeupdate", function () {
   audioBar.value = audio.currentTime / audio.duration;
@@ -55,60 +79,55 @@ playBnt.addEventListener("click", function () {
   playBnt.innerHTML = pauseBnt.style.display = "inline-block";
   playBnt.innerHTML = playBnt.style.display = "none";
 
-  
+  img.style.animationPlayState = 'running';
 });
 
 pauseBnt.addEventListener("click", function () {
   pauseBnt.innerHTML = playBnt.style.display = "inline-block";
   pauseBnt.innerHTML = pauseBnt.style.display = "none";
 
-
+  img.style.animationPlayState = 'paused';
 });
 
-let playlist = [{mp3:"./assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3", 
-                src:"/assets/songs/Bruno_Mars_-_Talking_To_The_Moon_CeeNaija.com_.mp3",
-                title:"Talking to the Moon", img:"./assets/capas/TTM-pic.webp",
-
-                mp3:"./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
-                src:"./assets/songs/Bruno Mars - Locked Out Of Heaven.mp3",
-                title:"Locked Out of Heaven", img: "./assets/capas/Locked Out of Heaven.webp",
-
-                mp3:"./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3"  ,
-                src:"./assets/songs/BoB_ft_Bruno_Mars_-_Nothin_On_You.mp3",
-                title:"Nothin on You", img: "./assets/capas/Nothin_On_You.jfif"
-
-              }]
-
-
-
 function nextMusic() {
-
-  let i = 0;
-
-  if(i === playlist.length - 1){  
-    i = 0;
-
-  }else{
-    i++
+  if (audio.canPlayType("audio/mp3") != "") {
+    audio.src = playlist[i].mp3;
   }
+  document.getElementById("nome_musica").innerHTML = playlist[i].title;
+  document.getElementById("img").src = playlist[i].img;
 
-  audio.src = playlist[i]
-  audio.addEventListener("ended", nextMusic)
+  //body.innerHTML = body.style.backgroundImage
 
+  audio.play();
+
+  i++;
+  if (i >= playlist.length) i = 0;
 }
 
-// if(audio  === null){
-//   throw "Playlist Player does not exists ...";
+function lastMusic() {
+  if (audio.canPlayType("audio/mp3") != "") {
+    audio.src = playlist[i].mp3;
+  }
+
+  document.getElementById("nome_musica").innerHTML = playlist[i].title;
+  document.getElementById("img").src = playlist[i].img;
+  audio.play();
+
+  i--;
+  if (i >= playlist.length) i = 0;
+}
+
+// let i = 0;
+
+// if(i === playlist.length - 1){
+//   i = 0;
+
 // }else{
-
-//   audio.src = playlist[i];
-
-//   audio.addEventListener("ended", nextMusic, false)
+//   i++
 // }
 
-
-
-
+// audio.src = playlist[i]
+// audio.addEventListener("ended", nextMusic)
 
 function volta_5() {
   audio.currentTime -= 5;
